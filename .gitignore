@@ -1,0 +1,11 @@
+data/
+checkpoints/
+*.bin
+*.pt
+.env
+wandb/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/

@@ -1,0 +1,1 @@
+"""Thin CLI entry points."""

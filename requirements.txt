@@ -1,0 +1,14 @@
+torch
+transformers
+datasets
+numpy
+regex
+tqdm
+matplotlib
+pyyaml
+pytest
+gradio
+# Reference libraries, used only inside tests/ for parity checks
+peft
+trl
+tokenizers
