@@ -364,3 +364,31 @@ The README must contain:
 - Implemented SFT, LoRA and DPO from scratch on Qwen2.5-0.5B, verified against PEFT/TRL with unit tests; raised GSM8K accuracy from X% to Y%.
 - Generated DPO preference pairs automatically from the model's own errors, adding Z points over SFT alone.
 - Showed LoRA (r=16) reaching N% of full fine-tuning accuracy with ~M× fewer trainable parameters; pretrained a 12M-parameter GPT (own BPE tokenizer, transformer and training loop) on TinyStories.s
+
+---
+
+## 15. Roadmap & human-only tasks
+
+The phased plan lives in `docs/roadmap.md`. Keep it updated: tick finished items, record each phase's completion date, and add new 👤 tasks as they come up. Decisions go in `docs/decisions.md`; learning notes and quizzes in `docs/learning/phase<N>.md`.
+
+**👤 Aggam-only tasks. Claude never does these or fakes their results:**
+- Creating or configuring accounts (GitHub, Kaggle, Hugging Face), including Kaggle phone verification and GPU enablement.
+- Handling secrets (API keys, HF tokens). Tell Aggam to use Kaggle Secrets or a local `.env`. Never ask for a token in chat; never commit one.
+- Running long GPU jobs on Kaggle/Colab, and downloading/uploading checkpoints.
+- Pushing to the GitHub remote and deploying the HF Space under Aggam's account.
+- Inspecting outputs by eye: story samples, loss curves, GSM8K prediction spot-checks.
+- The judgment parts of error analysis: Aggam categorises failures first, Claude checks afterwards.
+- Answering end-of-component quiz questions in their own words.
+- Writing the README "What I learned / what broke" section and their resume bullets in their own words. Claude may edit for clarity but keeps Aggam's voice.
+- Approving any decision that changes this plan (model, dataset, metric, scope).
+
+**How to hand off a 👤 task.** Stop and print a block like this:
+
+```
+👤 YOUR TURN
+Task: ...
+Exact steps: ... (numbered, with commands where relevant)
+Send me back: ... (e.g. loss plot, last 20 log lines, metrics JSON)
+```
+
+Do not continue with dependent work until Aggam has reported back. If Aggam tries to skip a 👤 task, remind them once why it matters, then follow their call.
